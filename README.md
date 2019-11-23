@@ -91,3 +91,33 @@ WARNING: Falling back on generic information extractor.
 [generic] .mpd: Extracting information
 ERROR: No video formats found; please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; type  youtube-dl -U  to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.
 user@user-HP-ProBook-4720s:~$ 
+
+--verbose
+
+user@user-HP-ProBook-4720s:~$ youtube-dl https://ondemand-cf-vrt.akamaized.net/content/vod/vid-aefd90e8-8d39-43d5-8666-17854ef47f33-CDN_1/vid-aefd90e8-8d39-43d5-8666-17854ef47f33-CDN_1_drm_dec3bc59-b122-4f1e-a143-3df98c008eed.ism/.mpd --verbose
+[debug] System config: []
+[debug] User config: []
+[debug] Custom config: []
+[debug] Command-line args: [u'https://ondemand-cf-vrt.akamaized.net/content/vod/vid-aefd90e8-8d39-43d5-8666-17854ef47f33-CDN_1/vid-aefd90e8-8d39-43d5-8666-17854ef47f33-CDN_1_drm_dec3bc59-b122-4f1e-a143-3df98c008eed.ism/.mpd', u'--verbose']
+[debug] Encodings: locale UTF-8, fs UTF-8, out UTF-8, pref UTF-8
+[debug] youtube-dl version 2019.11.22
+[debug] Python version 2.7.15+ (CPython) - Linux-4.15.0-66-generic-x86_64-with-LinuxMint-19.2-tina
+[debug] exe versions: ffmpeg 3.4.6, ffprobe 3.4.6
+[debug] Proxy map: {}
+[generic] .mpd: Requesting header
+WARNING: Falling back on generic information extractor.
+[generic] .mpd: Downloading webpage
+[generic] .mpd: Extracting information
+ERROR: No video formats found; please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; type  youtube-dl -U  to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.
+Traceback (most recent call last):
+  File "/usr/local/bin/youtube-dl/youtube_dl/YoutubeDL.py", line 796, in extract_info
+    ie_result = ie.extract(url)
+  File "/usr/local/bin/youtube-dl/youtube_dl/extractor/common.py", line 530, in extract
+    ie_result = self._real_extract(url)
+  File "/usr/local/bin/youtube-dl/youtube_dl/extractor/generic.py", line 2398, in _real_extract
+    self._sort_formats(info_dict['formats'])
+  File "/usr/local/bin/youtube-dl/youtube_dl/extractor/common.py", line 1327, in _sort_formats
+    raise ExtractorError('No video formats found')
+ExtractorError: No video formats found; please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; type  youtube-dl -U  to update. Be sure to call youtube-dl with the --verbose flag and include its complete output.
+
+user@user-HP-ProBook-4720s:~$ 
